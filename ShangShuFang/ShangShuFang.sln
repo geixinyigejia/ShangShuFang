@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShangShuFang", "ShangShuFan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShangShuFang.Tests", "ShangShuFang.Tests\ShangShuFang.Tests.csproj", "{17A63256-3607-4E51-92F4-6F4CF1555298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockoutjs", "Knockoutjs\Knockoutjs.csproj", "{B9908FE0-FCAB-4A21-A3FB-155089B1E800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{17A63256-3607-4E51-92F4-6F4CF1555298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17A63256-3607-4E51-92F4-6F4CF1555298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17A63256-3607-4E51-92F4-6F4CF1555298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9908FE0-FCAB-4A21-A3FB-155089B1E800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9908FE0-FCAB-4A21-A3FB-155089B1E800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9908FE0-FCAB-4A21-A3FB-155089B1E800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9908FE0-FCAB-4A21-A3FB-155089B1E800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
