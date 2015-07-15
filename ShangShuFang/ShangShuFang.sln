@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockoutjs", "Knockoutjs\Kn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDemo1", "WebAPIDemo1\WebAPIDemo1.csproj", "{C58057FC-000E-4DBF-ABD2-2699038383ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDemo2-BookService", "WebAPIDemo2-BookService\WebAPIDemo2-BookService.csproj", "{B49B98FF-16F3-40DE-90D5-D7C7BEEE7A56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C58057FC-000E-4DBF-ABD2-2699038383ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C58057FC-000E-4DBF-ABD2-2699038383ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C58057FC-000E-4DBF-ABD2-2699038383ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B49B98FF-16F3-40DE-90D5-D7C7BEEE7A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B49B98FF-16F3-40DE-90D5-D7C7BEEE7A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B49B98FF-16F3-40DE-90D5-D7C7BEEE7A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B49B98FF-16F3-40DE-90D5-D7C7BEEE7A56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
