@@ -1,10 +1,9 @@
 ﻿var ViewModel = function () {
     var self = this;
     self.books = ko.observableArray();
+    self.error = ko.observable();
     self.detail = ko.observable();
     self.authors = ko.observableArray();
-    self.error = ko.observable();
-
     self.newBook = {
         Author: ko.observable(),
         Genre: ko.observable(),
@@ -13,15 +12,14 @@
         Year: ko.observable()
     }
 
-    var booksUri = '/api/books';
-    var authors = '/api/authors';
+    var booksUri = '/api/books/';
+    var authorsUri = '/api/authors/';
 
-    function ajaxHelper(url, method, data) {
-        self.error(' ');
-
+    function ajaxHelper(uri, method, data) {
+        self.error(''); // Clear error message
         return $.ajax({
             type: method,
-            url: url,
+            url: uri,
             dataType: 'json',
             contentType: 'application/json',
             data: data ? JSON.stringify(data) : null
@@ -30,11 +28,10 @@
         });
     }
 
-
     function getAllBooks() {
         ajaxHelper(booksUri, 'GET').done(function (data) {
             self.books(data);
-        })
+        });
     }
 
     self.getBookDetail = function (item) {
@@ -44,10 +41,11 @@
     }
 
     function getAuthors() {
-        ajaxHelper(authors, 'GET').done(function (data) {
+        ajaxHelper(authorsUri, 'GET').done(function (data) {
             self.authors(data);
         });
     }
+
 
     self.addBook = function (formElement) {
         var book = {
@@ -55,7 +53,7 @@
             Genre: self.newBook.Genre(),
             Price: self.newBook.Price(),
             Title: self.newBook.Title(),
-            Year: self.newBook.Year
+            Year: self.newBook.Year()
         };
 
         ajaxHelper(booksUri, 'POST', book).done(function (item) {
@@ -63,6 +61,7 @@
         });
     }
 
+    // Fetch the initial data.
     getAllBooks();
     getAuthors();
 };
