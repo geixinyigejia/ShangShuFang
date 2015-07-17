@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div> Test</div>
+<select data-bind="
+                     options: Grades,
+                     optionsText: 'name',
+                     value:grade,
+                     optionsCaption: '选择年级'"></select>
+<!-- ko with:grade -->
+<select data-bind="
+                        visible:$parent.grade,
+                        options: subjects,
+                        optionsText: 'name',
+                        value:$parent.subject,
+                        optionsCaption: '选择学科'"></select>
+<!-- /ko -->
