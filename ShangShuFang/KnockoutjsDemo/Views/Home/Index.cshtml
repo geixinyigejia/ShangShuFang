@@ -1,18 +1,36 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
 }
 
-<div> Test</div>
-<select data-bind="
-                     options: Grades,
-                     optionsText: 'name',
-                     value:grade,
-                     optionsCaption: '选择年级'"></select>
-<!-- ko with:grade -->
-<select data-bind="
-                        visible:$parent.grade,
-                        options: subjects,
-                        optionsText: 'name',
-                        value:$parent.subject,
-                        optionsCaption: '选择学科'"></select>
-<!-- /ko -->
+<div class="editor-label">
+    账号：
+</div>
+<div class="editor-field">   
+    <input data-bind="value:name, validationElment:name, hasfocus:selName" />
+    <span class="validationWarn" data-bind="visible:selName">请输入用户名账号，它由字母汉字数字组成．</span>
+    <span data-bind="visible:!selName()"><span class="validationError" data-bind="validationMessage:name"></span></span>
+    <span data-bind="visible:!selName()"><span class="validationSuccess" data-bind="visible:name.isValid()"></span></span>
+</div>
+<div class="editor-label">
+    Email：
+</div>
+<div class="editor-field">
+    <input data-bind='value: Email,hasfocus:selEmail' />
+    <span data-bind="visible:!selEmail()"><span class="validationError" data-bind="validationMessage:Email"></span></span>
+    <span class="validationWarn" data-bind="visible:selEmail">请输入你的Email．</span>
+    <span data-bind="visible:!selEmail()"><span class="validationSuccess" data-bind="visible:Email.isValid()"></span></span>
+</div>
+<div class="editor-label">
+    手机：
+</div>
+<div class="editor-field">
+    <input data-bind='value: phone,hasfocus:selPhone' />
+    <span data-bind="visible:!selPhone()"><span class="validationError" data-bind="validationMessage:phone"></span></span>
+    <span class="validationWarn" data-bind="visible:selPhone">请输入你的电话．</span>
+    <span data-bind="visible:!selPhone()"><span class="validationSuccess" data-bind="visible:phone.isValid()"></span></span>
+</div>
+<div style="clear: both;"></div>
+<p>
+    <input type="button" value="Create" data-bind="click:Register" />
+</p>
+<img src="" onerror=""/>
